@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=750,target-densitydpi=device-dpi,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no" />
+    <meta content="yes" name="mobile-web-app-capable" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="robots" content="all" />
+    <meta name="author" content="" />
+    <meta name="Copyright" content="" />
+    <title>一抹秀发 好到会发光</title>
+    <link rel="stylesheet" href="css/public.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        width: 100%;
+        max-width: 750px;
+      }
+      .absolute-video {
+        position: absolute;
+        top: 0;
+        left: -5px;
+        z-index: -1;
+      }
+    </style>
+  </head>
+
+  <body style="max-width: 750px; margin: 0 auto;">
+    <div class="wrap">
+      <div class="box">
+        <img data-src="./img/ad-white/01.png" />
+        <img data-src="./img/ad-white/02.png" />
+        <div style="position: relative;">
+          <img data-src="./img/ad-white/03.png" />
+          <video
+            src="http://rud6oq6s8.hn-bkt.clouddn.com/mikang/mikang-ad-white-03.mp4" 
+            id="play_video_01"
+            class="absolute-video"
+            loop="true"
+            webkit-playsinline="true"
+            playsinline=""
+            preload="auto"
+            style="top: 100px; width: 759px;"
+            x5-video-player-type="h5"
+            x5-video-player-fullscreen="true"
+            autoplay=""
+            muted=""
+          ></video>
+        </div>
+        <img data-src="./img/ad-white/04.png" />
+        <img data-src="./img/ad-white/05.png" />
+        <img data-src="./img/ad-white/06.png" />
+        <img data-src="./img/ad-white/07.png" />
+        <img data-src="./img/ad-white/08.png" />
+        <img data-src="./img/ad-white/09.png" />
+        <img data-src="./img/ad-white/10.png" />
+        <img data-src="./img/ad-white/11.png" />
+        <img data-src="./img/ad-white/12.png" />
+      </div>
+    </div>
+    <!-- 横屏提示 start -->
+    <div id="orientLayer" class="mod-orient-layer">
+      <div class="mod-orient-layer__content">
+        <i class="icon mod-orient-layer__icon-orient"></i>
+        <div class="mod-orient-layer__desc"></div>
+      </div>
+    </div>
+    <!-- 横屏提示  end -->
+    <script src="./js/util.js"></script>
+    <script>
+      var imgs = [];
+      window.onscroll = function() {
+        lazyLoad(imgs);
+      }
+      window.onload = function () {
+        var wrapContainer = document.querySelector('.wrap');
+        imgs = wrapContainer.querySelectorAll('img');
+        lazyLoad(imgs);
+      }
+    </script>
+  </body>
+</html>
