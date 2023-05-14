@@ -101,6 +101,21 @@
         ></video>
         <video
           class="p1_1"
+          src="https://formalbucket.s3.ap-southeast-1.amazonaws.com/mikang-ad-green-03.mp4"
+          id="play_video_03"
+          class="relative-video"
+          loop="true"
+          webkit-playsinline="true"
+          playsinline=""
+          preload="auto"
+          style="width: 750px;"
+          x5-video-player-type="h5"
+          x5-video-player-fullscreen="true"
+          autoplay=""
+          muted=""
+        ></video>
+        <video
+          class="p1_1"
           src="http://rujv7y14h.hn-bkt.clouddn.com/mikang-ad-index-08.mp4"
           id="play_video_04"
           class="relative-video"
@@ -144,12 +159,12 @@
         var vdo = $("video")[0]; //jquery
         vdo.muted = false;
       }, false);
-      var swiper = new Swiper(".swiper-container", {
-        loop: true,
-      });
-      setInterval(function () {
-        swiper.slideNext(1000);
-      }, 3000);
+      // var swiper = new Swiper(".swiper-container", {
+      //   loop: true,
+      // });
+      // setInterval(function () {
+      //   swiper.slideNext(1000);
+      // }, 3000);
 
       var u = navigator.userAgent;
       var isAndroid = u.indexOf("Android") > -1 || u.indexOf("Adr") > -1; //android终端
