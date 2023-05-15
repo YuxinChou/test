@@ -84,9 +84,46 @@
     <div class="wrap">
       <img src="./img/index/01.png" class="dibu" />
       <div class="box" style="top: -57px;">
+        <div class="bnt">
+          <!-- Swiper start -->
+          <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+            <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px)">
+              <div class="swiper-slide swiper-slide-active" style="width: 750px">
+                <video
+                  src="https://formalbucket.s3.ap-southeast-1.amazonaws.com/mikang-ad-index-02-1.mp4"
+                  id="play_video_02-1"
+                  class="p1"
+                  loop="true"
+                  webkit-playsinline="true"
+                  playsinline=""
+                  preload="auto"
+                  style="width: 759px;"
+                  x5-video-player-type="h5"
+                  x5-video-player-fullscreen="true"
+                  autoplay=""
+                  muted=""
+                ></video>
+              </div>
+              <div class="swiper-slide swiper-slide-next" style="width: 750px">
+                <img data-src="./img/index/02-2.png" class="p2" />
+              </div>
+              <div class="swiper-slide" style="width: 750px">
+                <img data-src="./img/index/02-3.jpg" class="p3" />
+              </div>
+              <div class="swiper-slide" style="width: 750px">
+                <img data-src="./img/index/02-4.jpg" class="p4" />
+              </div>
+              <div class="swiper-slide" style="width: 750px">
+                <img data-src="./img/index/02-5.jpg" class="p5" />
+              </div>
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
+          <!-- Swiper end -->
+        </div>
         <video
           class="p1_1"
-          src="http://qiniucloud.dadaliya.com/mikang-ad-index-03.mp4"
+          src="https://formalbucket.s3.ap-southeast-1.amazonaws.com/mikang-ad-index-03.mp4"
           id="play_video_03"
           class="relative-video"
           loop="true"
@@ -99,37 +136,69 @@
           autoplay=""
           muted=""
         ></video>
+        <div class="p1_2">
+          <img data-src="./img/index/04.png" />
+          <video
+            src="https://formalbucket.s3.ap-southeast-1.amazonaws.com/mikang-ad-index-04.mp4" 
+            id="play_video_04"
+            class="absolute-video"
+            loop="true"
+            webkit-playsinline="true"
+            playsinline=""
+            preload="auto"
+            style="top: 50px; width: 759px;"
+            x5-video-player-type="h5"
+            x5-video-player-fullscreen="true"
+            autoplay=""
+            muted=""
+          ></video>
+        </div>
+        <div class="p1_3">
+          <img data-src="./img/index/05.png" />
+          <a href="./ad-red.html" class="link-btn"></a>
+        </div>
+        <div class="p1_4">
+          <img data-src="./img/index/06.gif" />
+        </div>
+        <div class="p1_5">
+          <img data-src="./img/index/07.png" />
+          <a href="./ad-green.html" class="link-btn"></a>
+        </div>
         <video
-          class="p1_1"
-          src="https://formalbucket.s3.ap-southeast-1.amazonaws.com/mikang-ad-green-03.mp4"
-          id="play_video_03-2"
+          src="https://formalbucket.s3.ap-southeast-1.amazonaws.com/mikang-ad-index-08.mp4" 
+          id="play_video_08"
           class="relative-video"
           loop="true"
           webkit-playsinline="true"
           playsinline=""
           preload="auto"
-          style="width: 750px;"
+          style="width: 759px;"
           x5-video-player-type="h5"
           x5-video-player-fullscreen="true"
           autoplay=""
           muted=""
         ></video>
-        <video
-          class="p1_1"
-          src="http://rujv7y14h.hn-bkt.clouddn.com/mikang-ad-index-08.mp4"
-          id="play_video_04"
-          class="relative-video"
-          loop="true"
-          webkit-playsinline="true"
-          playsinline=""
-          preload="auto"
-          style="width: 750px;"
-          x5-video-player-type="h5"
-          x5-video-player-fullscreen="true"
-          autoplay=""
-          muted=""
-        ></video>
-       
+        <div class="p1_6">
+          <img data-src="./img/index/09.png"/>
+          <video
+            src="https://formalbucket.s3.ap-southeast-1.amazonaws.com/mikang-ad-index-09.mp4" 
+            id="play_video_09"
+            class="absolute-video"
+            loop="true"
+            webkit-playsinline="true"
+            playsinline=""
+            preload="auto"
+            style="top: 50px; width: 759px;"
+            x5-video-player-type="h5"
+            x5-video-player-fullscreen="true"
+            autoplay=""
+            muted=""
+          ></video>
+        </div>
+        <div class="p_8">
+          <img data-src="./img/index/10.png"/>
+          <a href="./ad-white.html" class="link-btn"></a>
+        </div>
       </div>
     </div>
     <!-- 横屏提示 start -->
@@ -159,12 +228,12 @@
         var vdo = $("video")[0]; //jquery
         vdo.muted = false;
       }, false);
-      // var swiper = new Swiper(".swiper-container", {
-      //   loop: true,
-      // });
-      // setInterval(function () {
-      //   swiper.slideNext(1000);
-      // }, 3000);
+      var swiper = new Swiper(".swiper-container", {
+        loop: true,
+      });
+      setInterval(function () {
+        swiper.slideNext(1000);
+      }, 3000);
 
       var u = navigator.userAgent;
       var isAndroid = u.indexOf("Android") > -1 || u.indexOf("Adr") > -1; //android终端
@@ -175,9 +244,11 @@
           document.addEventListener(
             "touchstart",
             function () {
+              document.getElementById("play_video_02-1").play();
               document.getElementById("play_video_03").play();
-              document.getElementById("play_video_03-2").play();
               document.getElementById("play_video_04").play();
+              document.getElementById("play_video_08").play();
+              document.getElementById("play_video_09").play();
             },
             false
           );
@@ -186,9 +257,11 @@
             "WeixinJSBridgeReady",
             function () {
               //在这里写播放音乐，仅微信中有效
+              document.getElementById("play_video_02-1").play();
               document.getElementById("play_video_03").play();
-              document.getElementById("play_video_03-2").play();
               document.getElementById("play_video_04").play();
+              document.getElementById("play_video_08").play();
+              document.getElementById("play_video_09").play();
             },
             false
           );
